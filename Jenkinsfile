@@ -1,3 +1,4 @@
+#!/usr/bin/env groovy _
 pipeline {
 
     agent {
@@ -28,7 +29,7 @@ pipeline {
             steps {
                 checkout([
                     $class: 'GitSCM', 
-                    branches: [[name: '*/main']], 
+                    branches: [[name: 'develop']], 
                     userRemoteConfigs: [[url: 'https://github.com/spring-projects/spring-petclinic.git']]
                 ])
             }
